@@ -117,7 +117,7 @@ export default function Login() {
             className={styles.button_custom}
             onClick={() =>
               signIn("google", {
-                callbackUrl: "https://next-auth-app-beige.vercel.app",
+                callbackUrl: `${process.env.HOST_URL}`,
               })
             }
           >
@@ -138,7 +138,7 @@ export default function Login() {
             className={styles.button_custom}
             onClick={() =>
               signIn("github", {
-                callbackUrl: "https://next-auth-app-beige.vercel.app",
+                callbackUrl: `${process.env.HOST_URL}`,
               })
             }
           >

@@ -39,7 +39,7 @@ export default function Register() {
         .min(8, "Must be 8 characters long or more")
         .required("Required"),
     }),
-    onSubmit,
+    onSubmit: onSubmit,
   });
 
   async function onSubmit(values) {
@@ -53,7 +53,7 @@ export default function Register() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),
     };
-    await fetch("http://localhost:3000/api/auth", options)
+    await fetch(`${process.env.HOST_URL}/api/auth`, options)
       .then((res) => res.json())
       .then((data) => {
         toast.success("Successfully registered", {
@@ -61,7 +61,7 @@ export default function Register() {
           draggable: true,
           draggableDirection: "x",
         });
-        if (data) router.push("http://localhost:3000/login");
+        if (data) router.push(`${process.env.HOST_URL}/login`);
       });
   }
 
