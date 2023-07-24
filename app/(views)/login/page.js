@@ -116,7 +116,9 @@ export default function Login() {
             type="button"
             className={styles.button_custom}
             onClick={() =>
-              signIn("google", { callbackUrl: "http://localhost:3000" })
+              signIn("google", {
+                callbackUrl: "https://next-auth-app-beige.vercel.app",
+              })
             }
           >
             Sign In with Google
@@ -130,31 +132,14 @@ export default function Login() {
             />
           </button>
         </div>
-        {/* <div className="input-button">
-          <button
-            type="button"
-            className={styles.button_custom}
-            onClick={() =>
-              signIn("facebook", { callbackUrl: "http://localhost:3000" })
-            }
-          >
-            Sign In with Facebook
-            <Image
-              src={
-                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg"
-              }
-              alt="Facebook"
-              width={20}
-              height={20}
-            />
-          </button>
-        </div> */}
         <div className="input-button">
           <button
             type="button"
             className={styles.button_custom}
             onClick={() =>
-              signIn("github", { callbackUrl: "http://localhost:3000" })
+              signIn("github", {
+                callbackUrl: "https://next-auth-app-beige.vercel.app",
+              })
             }
           >
             Sign In with Github
@@ -168,23 +153,6 @@ export default function Login() {
             />
           </button>
         </div>
-        {/* <div className="input-button">
-          <button
-            type="button"
-            className={styles.button_custom}
-            onClick={() =>
-              signIn("netlify", { callbackUrl: "http://localhost:3000" })
-            }
-          >
-            Sign In with Netlify
-            <Image
-              src={"https://cdn.cdnlogo.com/logos/n/75/netlify.svg"}
-              alt="Netlify"
-              width={20}
-              height={20}
-            />
-          </button>
-        </div> */}
       </form>
       {/* form ends */}
       <p className="text-center text-gray-400">
